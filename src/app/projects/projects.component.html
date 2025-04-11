@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio | Projets</title>
+    <link rel="stylesheet" href="projects.component.css">
+</head>
+<body>
+
+   
+    <main class="projects-container">
+        <h1>Mes Projets</h1>
+        <p class="subtitle">Découvrez une sélection de mes projets récents</p>
+        
+        <!-- Filtres -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+        
+        <!-- Grille de projets -->
+        <div class="projects-grid">
+            <!-- Projet 1 -->
+            <div class="project-card" data-category="web">
+                <img src="images/project1.jpg" alt="Site Des films">
+                <div class="project-info">
+                    <h3>La listes des films</h3>
+                    <p>Plateforme e-commerce avec React et Node.js</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                    </div>
+                    <a href="#" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
+            
+            <!-- Projet 2 -->
+            <div class="project-card" data-category="mobile">
+                <img src="images/project2.jpg" alt="Application Fitness">
+                <div class="project-info">
+                    <h3>App Fitness</h3>
+                    <p>Application mobile de suivi sportif</p>
+                    <div class="project-tags">
+                        <span>Flutter</span>
+                        <span>Firebase</span>
+                    </div>
+                    <a href="#" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
+            
+            <!-- Projet 3 -->
+            <div class="project-card" data-category="design">
+                <img src="images/project3.jpg" alt="Identité visuelle">
+                <div class="project-info">
+                    <h3>Branding Café</h3>
+                    <p>Identité visuelle pour un café artisanale</p>
+                    <div class="project-tags">
+                        <span>Illustrator</span>
+                        <span>Photoshop</span>
+                    </div>
+                    <a href="#" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
+            
+            <!-- Ajoutez d'autres projets ici -->
+        </div>
+    </main>
+
+    <script src="js/projects.js"></script>
+</body>
+</html>
