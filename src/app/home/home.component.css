@@ -1,14 +1,118 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding-top: 70px; /* Pour éviter que la navbar ne couvre le contenu */
-    background-color: #f4f4f9;
-    color: #333;
-}
 
-.hero {
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
     text-align: center;
-    padding: 5rem 2rem;
-    background: linear-gradient(135deg, #3498db, #2c3e50);
-    color: white;
-}
+  }
+  
+  .home-content {
+    max-width: 700px;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid #333;
+  }
+  
+  .home h1 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .home h2 {
+    font-size: 1.6rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .home p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon i {
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .social-icon:hover {
+    color: #007bff;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .home {
+      padding: 1rem;
+      min-height: auto;
+    }
+  
+    .home-content {
+      padding: 1.5rem;
+    }
+  
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .home h1 {
+      font-size: 2.2rem;
+    }
+  
+    .home h2 {
+      font-size: 1.4rem;
+    }
+  
+    .home p {
+      font-size: 1rem;
+    }
+  
+    .cta-button {
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
