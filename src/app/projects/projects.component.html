@@ -1,9 +1,9 @@
-<!-- src/app/projects/projects.component.html -->
+
 <section id="projects" class="projects-container">
     <h1>Mes Projets</h1>
     <p class="subtitle">Découvrez une sélection de mes projets récents</p>
   
-    <!-- Filtres -->
+
     <div class="filters">
       <button class="filter-btn active" #filterBtn data-filter="all" (click)="filterProjects('all')">Tous</button>
       <button class="filter-btn" #filterBtn data-filter="JEE" (click)="filterProjects('JEE')">JEE</button>
@@ -11,9 +11,9 @@
       <button class="filter-btn" #filterBtn data-filter="Java" (click)="filterProjects('Java')">Java</button>
     </div>
   
-    <!-- Grille de projets -->
+   
     <div class="projects-grid">
-      <!-- Projet 1 -->
+      
       <div class="project-card" #projectCard data-category="JEE">
         <img src="/assets/project1.jpg" alt="ConstructionXpert">
         <div class="project-info">
@@ -22,11 +22,11 @@
           <div class="project-tags">
             <span>JEE</span>
           </div>
-          <a href="#" class="project-link">Voir le projet →</a>
+          <a href="https://github.com/soumia22k/ConstructionXpert" class="project-link">Voir le projet →</a>
         </div>
       </div>
   
-      <!-- Projet 2 -->
+  
       <div class="project-card" #projectCard data-category="HTML">
         <img src="/assets/project2.jpg" alt="Application Météo">
         <div class="project-info">
@@ -37,11 +37,11 @@
             <span>CSS</span>
             <span>JavaScript</span>
           </div>
-          <a href="#" class="project-link">Voir le projet →</a>
+          <a href="https://github.com/soumia22k/M-teoApp" class="project-link">Voir le projet →</a>
         </div>
       </div>
   
-      <!-- Projet 3 -->
+     
       <div class="project-card" #projectCard data-category="Java">
         <img src="/assets/project3.jpg" alt="SportFlow">
         <div class="project-info">
@@ -50,7 +50,7 @@
           <div class="project-tags">
             <span>Java</span>
           </div>
-          <a href="#" class="project-link">Voir le projet →</a>
+          <a href="https://github.com/soumia22k/SportFlow" class="project-link">Voir le projet →</a>
         </div>
       </div>
     </div>
