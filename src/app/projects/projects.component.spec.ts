@@ -1,23 +1,36 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// src/app/projects/projects.component.ts
+import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 
-import { ProjectsComponent } from './projects.component';
+@Component({
+  selector: 'app-projects',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.css']
+})
+export class ProjectsComponent {
+  @ViewChildren('projectCard') projectCards!: QueryList<ElementRef>;
+  @ViewChildren('filterBtn') filterButtons!: QueryList<ElementRef>;
 
-describe('ProjectsComponent', () => {
-  let component: ProjectsComponent;
-  let fixture: ComponentFixture<ProjectsComponent>;
+  selectedFilter: string = 'all';
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ProjectsComponent]
-    })
-    .compileComponents();
+  filterProjects(filter: string): void {
+    this.selectedFilter = filter;
 
-    fixture = TestBed.createComponent(ProjectsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    this.projectCards.forEach(card => {
+      const category = card.nativeElement.getAttribute('data-category');
+      const cardElement = card.nativeElement;
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+      cardElement.classList.remove('hidden');
+      if (filter !== 'all' && category !== filter) {
+        cardElement.classList.add('hidden');
+      }
+    });
+
+    this.filterButtons.forEach(btn => {
+      const btnElement = btn.nativeElement;
+      btnElement.classList.remove('active');
+      if (btnElement.getAttribute('data-filter') === filter) {
+        btnElement.classList.add('active');
+      }
+    });
+  }
+}

@@ -1,74 +1,57 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio | Projets</title>
-    <link rel="stylesheet" href="projects.component.css">
-</head>
-<body>
-
-   
-    <main class="projects-container">
-        <h1>Mes Projets</h1>
-        <p class="subtitle">Découvrez une sélection de mes projets récents</p>
-        
-        <!-- Filtres -->
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">Tous</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="mobile">Mobile</button>
-            <button class="filter-btn" data-filter="design">Design</button>
+<!-- src/app/projects/projects.component.html -->
+<section id="projects" class="projects-container">
+    <h1>Mes Projets</h1>
+    <p class="subtitle">Découvrez une sélection de mes projets récents</p>
+  
+    <!-- Filtres -->
+    <div class="filters">
+      <button class="filter-btn active" #filterBtn data-filter="all" (click)="filterProjects('all')">Tous</button>
+      <button class="filter-btn" #filterBtn data-filter="JEE" (click)="filterProjects('JEE')">JEE</button>
+      <button class="filter-btn" #filterBtn data-filter="HTML" (click)="filterProjects('HTML')">HTML</button>
+      <button class="filter-btn" #filterBtn data-filter="Java" (click)="filterProjects('Java')">Java</button>
+    </div>
+  
+    <!-- Grille de projets -->
+    <div class="projects-grid">
+      <!-- Projet 1 -->
+      <div class="project-card" #projectCard data-category="JEE">
+        <img src="/assets/project1.jpg" alt="ConstructionXpert">
+        <div class="project-info">
+          <h3>La gestion des Projets</h3>
+          <p>Application de gestion des projets de construction développée avec JEE.</p>
+          <div class="project-tags">
+            <span>JEE</span>
+          </div>
+          <a href="#" class="project-link">Voir le projet →</a>
         </div>
-        
-        <!-- Grille de projets -->
-        <div class="projects-grid">
-            <!-- Projet 1 -->
-            <div class="project-card" data-category="web">
-                <img src="images/project1.jpg" alt="Site Des films">
-                <div class="project-info">
-                    <h3>La listes des films</h3>
-                    <p>Plateforme e-commerce avec React et Node.js</p>
-                    <div class="project-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
-                    </div>
-                    <a href="#" class="project-link">Voir le projet →</a>
-                </div>
-            </div>
-            
-            <!-- Projet 2 -->
-            <div class="project-card" data-category="mobile">
-                <img src="images/project2.jpg" alt="Application Fitness">
-                <div class="project-info">
-                    <h3>App Fitness</h3>
-                    <p>Application mobile de suivi sportif</p>
-                    <div class="project-tags">
-                        <span>Flutter</span>
-                        <span>Firebase</span>
-                    </div>
-                    <a href="#" class="project-link">Voir le projet →</a>
-                </div>
-            </div>
-            
-            <!-- Projet 3 -->
-            <div class="project-card" data-category="design">
-                <img src="images/project3.jpg" alt="Identité visuelle">
-                <div class="project-info">
-                    <h3>Branding Café</h3>
-                    <p>Identité visuelle pour un café artisanale</p>
-                    <div class="project-tags">
-                        <span>Illustrator</span>
-                        <span>Photoshop</span>
-                    </div>
-                    <a href="#" class="project-link">Voir le projet →</a>
-                </div>
-            </div>
-            
-            <!-- Ajoutez d'autres projets ici -->
+      </div>
+  
+      <!-- Projet 2 -->
+      <div class="project-card" #projectCard data-category="HTML">
+        <img src="/assets/project2.jpg" alt="Application Météo">
+        <div class="project-info">
+          <h3>App Météo</h3>
+          <p>Application web pour afficher les prévisions météo, développée avec HTML, CSS et JavaScript.</p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <a href="#" class="project-link">Voir le projet →</a>
         </div>
-    </main>
-
-    <script src="js/projects.js"></script>
-</body>
-</html>
+      </div>
+  
+      <!-- Projet 3 -->
+      <div class="project-card" #projectCard data-category="Java">
+        <img src="/assets/project3.jpg" alt="SportFlow">
+        <div class="project-info">
+          <h3>SportFlow</h3>
+          <p>Application pour gérer les salles de sport, incluant les entraîneurs, séances, etc., développée en Java.</p>
+          <div class="project-tags">
+            <span>Java</span>
+          </div>
+          <a href="#" class="project-link">Voir le projet →</a>
+        </div>
+      </div>
+    </div>
+  </section>
